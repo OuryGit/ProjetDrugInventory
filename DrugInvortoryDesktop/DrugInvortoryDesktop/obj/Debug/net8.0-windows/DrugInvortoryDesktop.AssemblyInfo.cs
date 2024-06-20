@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrugInvortoryDesktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da028fb887887a68fa9765f52c999646df0f5b59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb2da4de265d8696be483488e428c31fbe4ae47c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrugInvortoryDesktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrugInvortoryDesktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
