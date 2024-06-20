@@ -4,25 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DrugInvortoryDesktop"
-        mc:Ignorable="d"
-        Title="Drug Inventory Desktop" Height="450" Width="800" FontSize="20" FontFamily="Arial Black" HorizontalAlignment="Left">
+        WindowStartupLocation="CenterScreen" WindowStyle="none" AllowsTransparency="True" Background="White" 
+        Title="Drug Inventory Desktop" Height="550" Width="900" FontSize="20" FontFamily="Arial Black" HorizontalAlignment="Left">
     <Grid>
 
         <Grid.ColumnDefinitions >
-            <ColumnDefinition x:Name="imagePageConnexion">
+            <ColumnDefinition Width="*" x:Name="imagePageConnexion">
             </ColumnDefinition>
 
-            <ColumnDefinition x:Name="formConnexion">
+            <ColumnDefinition Width=".9*" x:Name="formConnexion">
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <!-- Partie droite de la page de connexion -->
+        <Border x:Name="ConnexionGauche" CornerRadius="10 0 0 10">
+            <Grid>
+                <Image   Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"   Source="/Marijuana-1.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" />
+                <StackPanel >
+                    <TextBlock Text="Drug-Inventory" TextAlignment="Center" FontSize="45px" Padding="10" Foreground="Wheat"/>
+                    <Button  Style="{StaticResource button}" Content="Sign Up" 
+                             
+                             />
+                </StackPanel>
+            </Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+        </Border>
 
-        <Image   Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"   Source="/Marijuana-1.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" />
-        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="0,10,0,0" >
+
+        <!-- Partie Gauche où se le formulaire de la page de conn -->
+
+        <StackPanel x:Name="connexionDroite" Orientation="Vertical" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="0,10,0,0" >
             <TextBox TextWrapping="Wrap" Text="WELCOME" Width="210" TextChanged="TextBox_TextChanged" Height="43" Margin="-3,30,1,1" HorizontalAlignment="Center" FontSize="24" BorderBrush="White"/>
             <DockPanel>
                 <Label Content="Email:"  Margin="10,10,10,10" Width="82"/>
@@ -42,7 +52,6 @@
             <Button x:Name="btnSignUp" Content="Sign up" FontSize="16" FontFamily="Arial" Background="#FFFCFAFA" Height="35" Margin="5,40,5,5" Width="126" Foreground="#FFFD971D" BorderBrush="#FFFFFDFD"/>
 
         </StackPanel>
-        <Label Content="DrugInventory" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="48" Width="334" Foreground="#FFF9F7F7" FontSize="36"/>
 
 
 

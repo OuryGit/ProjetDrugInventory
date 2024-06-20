@@ -19,3 +19,27 @@ C:\Users\Mamadou\OneDrive\Documents\Cours-Cité_collegiale\projet integration\li
 C:\Users\Mamadou\OneDrive\Documents\Cours-Cité_collegiale\projet integration\livrable\ProjetDrugInventory\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.pdb
 C:\Users\Mamadou\OneDrive\Documents\Cours-Cité_collegiale\projet integration\livrable\ProjetDrugInventory\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.genruntimeconfig.cache
 C:\Users\Mamadou\OneDrive\Documents\Cours-Cité_collegiale\projet integration\livrable\ProjetDrugInventory\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\ref\DrugInvortoryDesktop.dll
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop_MarkupCompile.cache
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.dll
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\refint\DrugInvortoryDesktop.dll
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.pdb
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\bin\Debug\net8.0-windows\DrugInvortoryDesktop.exe
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\bin\Debug\net8.0-windows\DrugInvortoryDesktop.deps.json
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\bin\Debug\net8.0-windows\DrugInvortoryDesktop.runtimeconfig.json
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\bin\Debug\net8.0-windows\DrugInvortoryDesktop.dll
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\bin\Debug\net8.0-windows\DrugInvortoryDesktop.pdb
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop_MarkupCompile.lref
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.g.resources
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.AssemblyInfoInputs.cache
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.AssemblyInfo.cs
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.sourcelink.json
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\DrugInvortoryDesktop.genruntimeconfig.cache
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\ref\DrugInvortoryDesktop.dll
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\App.baml
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\views\Window1.g.cs
+C:\Users\Mamadou\OneDrive\Bureau\ProjetDrugInventory\DrugInvortoryDesktop\DrugInvortoryDesktop\obj\Debug\net8.0-windows\views\Window1.baml

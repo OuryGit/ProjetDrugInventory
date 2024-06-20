@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mamadou\\OneDrive\\Documents\\Cours-Cité_collegiale\\projet integration\\livrable\\ProjetDrugInventory\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\DrugInvortoryDesktop.csproj",
+      "projectUniqueName": "C:\\Users\\Mamadou\\OneDrive\\Bureau\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\DrugInvortoryDesktop.csproj",
       "projectName": "DrugInvortoryDesktop",
-      "projectPath": "C:\\Users\\Mamadou\\OneDrive\\Documents\\Cours-Cité_collegiale\\projet integration\\livrable\\ProjetDrugInventory\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\DrugInvortoryDesktop.csproj",
+      "projectPath": "C:\\Users\\Mamadou\\OneDrive\\Bureau\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\DrugInvortoryDesktop.csproj",
       "packagesPath": "C:\\Users\\Mamadou\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mamadou\\OneDrive\\Documents\\Cours-Cité_collegiale\\projet integration\\livrable\\ProjetDrugInventory\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\obj\\",
+      "outputPath": "C:\\Users\\Mamadou\\OneDrive\\Bureau\\ProjetDrugInventory\\DrugInvortoryDesktop\\DrugInvortoryDesktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
