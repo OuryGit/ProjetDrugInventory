@@ -1,0 +1,354 @@
+﻿<Window x:Class="DrugInvortoryDesktop.views.Accueil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:DrugInvortoryDesktop.ControlAccueil"
+        xmlns:local="clr-namespace:DrugInvortoryDesktop.views"
+        mc:Ignorable="d"
+        Title="Accueil" Height="720" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" 
+        Background="Transparent">
+    <Border Background="White"  CornerRadius="20" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
+        <!--*************************  grid  **************************************** -->
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="200" Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Partie gauche de la page-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Menu icon-->
+                <Button Style="{StaticResource topButton}" Margin="20 28 0 35">
+                    <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
+                </Button>
+
+                <Border Grid.Row="1" Background="#FF115611" CornerRadius="0 30 0 0">
+                    <DockPanel>
+                        <!--Menu logo-->
+                        <Border Width="80" Height="80" Padding="3" Background="White" CornerRadius="100" 
+                         DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30  0 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="/images/imageUser.webp"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+                        <!--informations de l'ultisateur-->
+                        <TextBlock x:Name="nomUtilisatuer" Text="NomDeLaPersonneConnectée" Foreground= "White" FontSize="22"  FontStyle="Italic" FontWeight="SemiBold"
+                         DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"  Padding="5"/>
+                        <TextBlock Text="Administrateur"  x:Name="titreUtilisatuer" FontSize="18" FontWeight="SemiBold"
+                         DockPanel.Dock="Top" TextAlignment="Center" Foreground="White"  FontStyle="Italic"/>
+
+                        <!--les buttons sur le menu-->
+                        <StackPanel DockPanel.Dock="top">
+                            <Button Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="PlusBox" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Ajouter une plantule"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Update" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Modifier une plantule"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Information" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Informations"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="History" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Historique"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <Button Style="{StaticResource menuButton }" VerticalAlignment="Bottom" DockPanel.Dock ="Bottom" >
+                            <StackPanel Orientation="Horizontal">
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock x:Name="btnSedeconnecter" Foreground="Orange" Text="Se déconnecter" MouseDown="btnSedeconnecter_MouseDown"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                </Border>
+            </Grid>
+            
+           <!--Partie principale de la page-->
+            <Grid Grid.Column="1" Margin="30 20 20 20 ">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <!--la barre de recherche-->
+                <Grid MinWidth="300 " MaxWidth="400" HorizontalAlignment="Left">
+                    <TextBlock Margin=" 20 0" VerticalAlignment="Center" Foreground="#FF96EF96" FontSize="20" IsHitTestVisible="False"
+                               Panel.ZIndex="1" Text="chercher une plantule ..."
+                               Visibility="Collapsed"/>
+                    <TextBox x:Name="txtRecherche" Style="{StaticResource txtboxRecherche}"/>
+                    <Icon:PackIconMaterial Kind="SearchWeb" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,0,15,0" Foreground="Green" FontSize="20"/>
+                </Grid>
+                
+                <!--les boutons imprimer-->
+                <!-- Utilisation du style défini dans Styles.xaml -->
+                <Button Style="{StaticResource PrintButtonStyle}" Height="50" HorizontalAlignment="Right" Width="Auto" Margin="0 0 35 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Printer" Foreground="White" VerticalAlignment="Center" Width="24" Height="24" Margin="0,0,10,0"/>
+                        <TextBlock Text="Imprimer" Foreground="White" VerticalAlignment="Center" Margin="0,0,40,0" Padding="0 0 20 0" />
+                    </StackPanel>
+                </Button>
+                <Grid  Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Style="{ StaticResource text}" Grid.Row="0" Grid.Column="0" Text="Identifiant" />
+                    <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Style="{ StaticResource text}" Text="Etat de santé"/>
+                            <TextBlock HorizontalAlignment="Center" Style="{ StaticResource text}" Grid.Row="0" Grid.Column="1" Text="Stade"/>
+                            <TextBlock HorizontalAlignment="Center" Style="{ StaticResource text}" Grid.Row="0" Grid.Column="2" Text="Entreposage"/>
+                            <ComboBox x:Name="cmbxEtat" Grid.Column="0" Grid.Row="1" Style="{StaticResource GreenComboBoxStyle}">
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" Background="White" IsSelected="True">Sélectionner un état</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" Background="Green">Bonne Santé</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" Background="Yellow">Moyenne santé</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" Background="Orange">Mauvaise santé</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" Background="Red">Grand danger</ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Grid.Column="1"  Grid.Row="1" x:Name="cmbxSatde" Style="{StaticResource GreenComboBoxStyle}">
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" IsSelected="True">Sélectionner un stade</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Initiation</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" >Microdissection</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" >Magenta</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Double magenta</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Hydroponie</ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Grid.Column="2" Grid.Row="1" x:Name="cbxEntreposage" Style="{StaticResource GreenComboBoxStyle}">
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" IsSelected="True">Sélectionner un entreposage</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Initiation</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" >Microdissection</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}" >Magenta</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Double magenta</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Hydroponie</ComboBoxItem>
+                                <ComboBoxItem Style="{StaticResource GreenComboBoxItemStyle}">Ajouter un nouvel entreposage</ComboBoxItem>
+
+                            </ComboBox>
+                        </Grid>
+                    </StackPanel>
+                    <TextBlock Style="{ StaticResource text}" Grid.Row="2" Text="Date" TextWrapping="Wrap" 
+                    TextTrimming="CharacterEllipsis"/>
+                    <TextBlock Style="{ StaticResource text}" Grid.Row="3" Text="Provenence"/>
+                    <TextBlock Style="{ StaticResource text}" Grid.Row="4" Text="Description"/>
+                    
+                    <uc:MyTextBox x:Name="txtId" Grid.Row="0" Grid.Column="1" />
+                    <!--les etat sde  santé-->
+                    
+                    <!--la date-->
+                    <DatePicker x:Name="datePickAjout" Grid.Row="2" Grid.Column="1" SelectedDate="{Binding DateArrival}" Margin="10"/>
+                    <!--la provenence-->
+                    <uc:MyTextBox x:Name="txtbxProvence" Grid.Row="3" Grid.Column="1" />
+                    <!--la description-->
+                    <uc:MyTextBox x:Name="txtbxDescription" Grid.Row="4" Grid.Column="1" />
+                    
+
+                </Grid>
+                <Button  Grid.Row="2" Background="Green" x:Name="btn_ajouter" HorizontalAlignment="Center"   Style="{StaticResource menuButton}" Click="btn_ajouter_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="PlusBox" Style="{StaticResource menuButtonIcon}"/>
+                        <TextBlock Text="Ajouter " />
+                    </StackPanel>
+                </Button>
+                <!--<Border Background="Green" Height="2" Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,10"/>-->
+
+                <!--listes des plantules-->
+                <TextBlock Text="Listes des plantules." FontStyle="Oblique" Grid.Row="3" FontSize="30" FontWeight="Bold" Foreground="#FF043E04" HorizontalAlignment="Center" Margin="0 20 0 0"/>
+                
+                <!--la grilles des plantules-->
+                <!--<DataGrid x:Name="grillePlante" Grid.Row="5"  Grid.RowSpan="9" Grid.Column="2" Background="LightGray" RowBackground="LightYellow"
+                          AlternatingRowBackground="CornflowerBlue" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+                    BorderBrush="Gray"  BorderThickness="5" IsReadOnly="True" CanUserSortColumns = "True"   AreRowDetailsFrozen="True" CanUserResizeColumns="False" 
+                          CanUserReorderColumns="True"    Margin="30,2,2,2"
+                          
+                          
+                          />-->
+                <DataGrid ItemsSource="{Binding List}" Grid.Row="4" Padding="5" x:Name="grillesDesplantules" AutoGenerateColumns="False"
+                          BorderBrush="#6B7C4E" BorderThickness="5" Background="White"   RowHeaderWidth="0" IsReadOnly="True" RowHeight="30" 
+                          VerticalContentAlignment="Center"
+                          Style="{DynamicResource DataGridStyle1}"   CellStyle="{DynamicResource DataGridCellStyle1}" 
+                          ColumnHeaderStyle="{DynamicResource
+                    DataGridColumnHeaderStyle1}" SelectionChanged="grillesDesplantules_SelectionChanged" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" FontWeight="Medium" Binding="{Binding IdPlante}" Width="*" />
+                        <DataGridTextColumn Header="Etat de santé" FontWeight="Medium" Binding="{Binding  EtatSante}" Width="*" />
+                        <DataGridTextColumn Header="Provenance" FontWeight="Medium" Binding="{Binding Provenance}" Width="*" />
+                        <DataGridTextColumn Header="Date d'ajout" FontWeight="Medium" Binding="{Binding DateAjout}" Width="*" />
+                        <DataGridTextColumn Header="Entreposage" FontWeight="Medium" Binding="{Binding Entreposage}" Width="*"  />
+                        <DataGridTextColumn Header="Description" FontWeight="Medium" Binding="{Binding Description, StringFormat=d}" Width="*"  />
+                        <DataGridTextColumn Header="Stade" FontWeight="Medium" Binding="{Binding Stade}" Width="*"  />
+                        <DataGridTemplateColumn Header="operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="modifierButton" Click="modifierButton_Click" Style="{StaticResource grideditbtn}">
+                                            <Icon:PackIconMaterial Kind="Update"  Style="{StaticResource gridIcons}"/>
+                                        </Button>
+                                        <Button x:Name="supprimerButton" Click="supprimerButton_Click" Style="{StaticResource gridArchiveditbtn}">
+                                            <Icon:PackIconMaterial Kind="Archive" Style="{StaticResource gridIcons}"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Foreground" Value="Black" />
+                            <Setter Property="FontFamily" Value="Poppins" />
+                            <Setter Property="FontWeight" Value="Light" />
+                            <Setter Property="FontSize" Value="12" />
+                            <Setter Property="BorderThickness" Value="2,0,0,0" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="Margin" Value="0" />
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+                            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGridRow">
+                                        <Border x:Name="border" Background="{TemplateBinding Background}" 
+                                                BorderThickness="0" CornerRadius="0">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="0" />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <SelectiveScrollingGrid Grid.Column="1">
+                                                    <SelectiveScrollingGrid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </SelectiveScrollingGrid.ColumnDefinitions>
+                                                    <DataGridCellsPresenter Grid.Column="1" Margin="0" VerticalAlignment="Center" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                                </SelectiveScrollingGrid>
+                                            </Grid>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#298da0" />
+                                                <Setter Property="Background" Value="#ddeff1" />
+                                                <Setter TargetName="border" Property="BorderThickness" Value="3,0,0,0" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#00000000" />
+                                                <Setter TargetName="border" Property="BorderThickness" Value="3,0,0,0" />
+                                            </Trigger>
+                                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                                <Setter TargetName="border" Property="Background" Value="#E0E0E0" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGrid.RowStyle>
+                         
+                </DataGrid>
+
+                <!--<DataGrid Style="{DynamicResource DataGridStyle1}"   CellStyle="{DynamicResource DataGridCellStyle1}" 
+                          ColumnHeaderStyle="{DynamicResource
+                DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" 
+                Grid.Row="4" x:Name="grillesDesplantules" >
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn   CanUserResize="False" Width="auto">
+                            <DataGridCheckBoxColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </DataGridCheckBoxColumn.HeaderTemplate>
+                        </DataGridCheckBoxColumn>
+                        --><!--<DataGridTemplateColumn Header="ID"   IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="AliceBlue">
+                                            <TextBlock Text="..." VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 1"/>
+                                        </Border>
+                                        <TextBlock Text="..." VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>--><!--
+                        
+                      
+                        <DataGridTemplateColumn Header="operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="modifierButton" Style="{StaticResource grideditbtn}">
+                                            <Icon:PackIconMaterial Kind="Update" Style="{StaticResource gridIcons}"/>
+                                        </Button>
+                                        <Button x:Name="supprimerButton" Style="{StaticResource gridArchiveditbtn}">
+                                            <Icon:PackIconMaterial Kind="Archive" Style="{StaticResource gridIcons}"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+
+                    </DataGrid.Columns>
+                </DataGrid>-->
+
+                <!--section de pagination-->
+                <!--<Border Grid.Row="5" HorizontalAlignment="Right" BorderBrush="Green" BorderThickness="1" 
+                        CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource paginationButton}">
+                            <Icon:PackIconMaterial Kind="ChevronDoubleLeft" Style="{StaticResource paginationButtonIcons}" />
+                        </Button>
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
+                    </StackPanel>
+                    
+                </Border>-->
+                
+
+            </Grid>
+
+               
+
+
+        </Grid>
+    </Border>
+</Window>
