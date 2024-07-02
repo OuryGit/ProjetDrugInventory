@@ -7,6 +7,23 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Update="ControlAccueil\MyTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ControlUtilisatuer\MyTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ControlAccueil\MyTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ControlUtilisatuer\MyTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+>>>>>>> Stashed changes
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
